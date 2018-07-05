@@ -14,7 +14,7 @@ class Account extends Component {
     render() {
         return (
             <View style={styles.accountContainer}>
-                <Text style={styles.title}>Account Component</Text>
+                <Text style={styles.title}>Account Componentt</Text>
             </View>
         );
     }
@@ -24,7 +24,7 @@ class About extends Component {
     render() {
         return (
             <View style={styles.aboutContainer}>
-                <Text style={styles.title}>Account Component</Text>
+                <Text style={styles.title}>Account Componentt</Text>
             </View>
         );
     }
@@ -34,7 +34,7 @@ class SignIn extends Component {
     render() {
         return (
             <View style={styles.signInContainer}>
-                <Text style={styles.title}>Sign In Component</Text>
+                <Text style={styles.title}>Sign In Componentt</Text>
             </View>
         );
     }

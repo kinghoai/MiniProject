@@ -6,29 +6,13 @@ import {
 } from 'react-native';
 
 import { TabNav } from './Navigation/TabNav';
+import { FlatListComponent } from './FlatList/FlatList';
+
 export default class App extends Component {
   render() {
     return (
-      <TabNav/> 
+      // <TabNav/>
+      <FlatListComponent/> 
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
