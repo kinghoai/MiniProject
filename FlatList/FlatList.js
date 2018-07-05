@@ -18,19 +18,21 @@ componentDidMount(){
 }
 
     render() {
-        const { users, refresh } = this.state;
+        const { users, } = this.state;
 
         return (
             <View style={styles.container}>                
                 <FlatList
-                refreshing={false}
                     data={users}
                     renderItem={({item})=>(
-                        <View style={styles.itemContainer}>
+                        <TouchableOpacity 
+                            style={styles.itemContainer}
+                            onPress={()=> this.props.navigation.navigate('Detail', {item})}
+                        >
                             <Text>
                                 {item.name}
                             </Text>
-                        </View>
+                        </TouchableOpacity>
                     )}
                     keyExtractor={(item, index) => String(item.id)}
                     // numColumns={2}

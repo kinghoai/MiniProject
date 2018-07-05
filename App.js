@@ -7,12 +7,16 @@ import {
 
 import { TabNav } from './Navigation/TabNav';
 import { FlatListComponent } from './FlatList/FlatList';
+import { Detail } from './FlatList/Detail';
+import { Stack } from './FlatList/Stack';
 
 export default class App extends Component {
   render() {
     return (
       // <TabNav/>
-      <FlatListComponent/> 
+      // <FlatListComponent/>
+      // <Detail/>
+      <Stack/>
     );
   }
 }
