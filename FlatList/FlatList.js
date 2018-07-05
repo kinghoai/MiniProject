@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 
+import { FlatListView } from './FlatListView';
+
 export class FlatListComponent extends Component {
     constructor(props) {
         super(props);
@@ -18,26 +20,30 @@ componentDidMount(){
 }
 
     render() {
-        const { users, } = this.state;
+        const { users } = this.state;
 
         return (
-            <View style={styles.container}>                
-                <FlatList
-                    data={users}
-                    renderItem={({item})=>(
-                        <TouchableOpacity 
-                            style={styles.itemContainer}
-                            onPress={()=> this.props.navigation.navigate('Detail', {item})}
-                        >
-                            <Text>
-                                {item.name}
-                            </Text>
-                        </TouchableOpacity>
-                    )}
-                    keyExtractor={(item, index) => String(item.id)}
-                    // numColumns={2}
-                />
-            </View>
+            // <View style={styles.container}>                
+            //     <FlatList
+            //         data={users}
+            //         renderItem={({item})=>(
+            //             <TouchableOpacity 
+            //                 style={styles.itemContainer}
+            //                 onPress={()=> this.props.navigation.navigate('Detail', {item})}
+            //             >
+            //                 <Text>
+            //                     {item.name}
+            //                 </Text>
+            //             </TouchableOpacity>
+            //         )}
+            //         keyExtractor={(item, index) => String(item.id)}
+            //         // numColumns={2}
+            //     />
+            // </View>
+            <FlatListView
+                users={users}
+                onPress={()=> this.props.navigation.navigate('Detail')}
+            />
         )
     }
 }
