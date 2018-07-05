@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import { TabNavigator } from 'react-navigation';
+import { TabNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import signInIcon from '../images/signin.png';
 import accountIcon from '../images/account.png';
@@ -40,9 +40,9 @@ class SignIn extends Component {
     }
 }
 
-const options =  { tabBarOptions: { showIcon: true }, tabBarPosition: 'bottom' };
+const options =  { tabBarOptions: { showIcon: true } };
 
-export const TabNav = TabNavigator({
+export const TabNav = createBottomTabNavigator({
     SignIn: {
         screen: SignIn,
         navigationOptions: {
