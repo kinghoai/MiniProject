@@ -17,7 +17,7 @@ export class Detail extends Component {
                     <Text style={styles.headerText}>item.name</Text>
                 </View>
                 <View style= {styles.body}>
-                    <Text style= {styles.bodyText}>JSON.stringify(item)</Text>                    
+                    <Text style= {styles.bodyText}>JSON.stringify(item)</Text>
                 </View>
             </View>
         )

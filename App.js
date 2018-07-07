@@ -9,6 +9,7 @@ import { TabNav } from './Navigation/TabNav';
 import { FlatListComponent } from './FlatList/FlatList';
 import { Detail } from './FlatList/Detail';
 import { Stack } from './FlatList/Stack';
+import { Home } from './Redux/Ex1/Home';
 
 export default class App extends Component {
   render() {
@@ -16,7 +17,8 @@ export default class App extends Component {
       // <TabNav/>
       // <FlatListComponent/>
       // <Detail/>
-      <Stack/>
+      // <Stack/>
+      <Home/>
     );
   }
 }
