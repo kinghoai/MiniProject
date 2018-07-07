@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 export class ComC extends Component {
     constructor(props){
@@ -16,9 +16,14 @@ ChangeColorC(){
 }
 
     render() {
+        const { change } = this.props;
         return (
             <View style={{ width:100, height:100, backgroundColor:this.state.color, justifyContent:'center', alignItems:'center' }}>
-                
+                <TouchableOpacity onPress={()=>{
+                    change();
+                }}>
+                <Text style={{ color: '#FFF' }}>Change Color A</Text>
+                </TouchableOpacity>
             </View>
         )
     }

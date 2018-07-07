@@ -9,9 +9,10 @@ export class ComB extends Component {
     }
 
     render() {
+        const { change } = this.props;
         return (
             <View style={{ width:200, height:200, backgroundColor:'yellow', justifyContent:'center', alignItems:'center' }}>
-                <ComC ref="comC"/>
+                <ComC ref="comC" change={change}/>
             </View>
         )
     }
