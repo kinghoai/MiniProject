@@ -17,8 +17,8 @@ export default class App extends Component {
       // <TabNav/>
       // <FlatListComponent/>
       // <Detail/>
-      // <Stack/>
-      <Home/>
+      <Stack/>
+      // <Home/>
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 
 export class FlatListView extends Component {
+
     render() {
         const { users, onPress } = this.props;
         return (            
@@ -10,7 +11,7 @@ export class FlatListView extends Component {
                     data={users}
                     renderItem={({item})=>(
                         <TouchableOpacity 
-                            onPress={onPress}
+                            onPress={()=>onPress(item)}
                             style={styles.itemContainer}
                         >
                             <Text>

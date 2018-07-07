@@ -19,6 +19,7 @@ componentDidMount(){
     .catch((e)=> console.log(e))
 }
 
+
     render() {
         const { users } = this.state;
 
@@ -42,7 +43,7 @@ componentDidMount(){
             // </View>
             <FlatListView
                 users={users}
-                onPress={()=> this.props.navigation.navigate('Detail')}
+                onPress={(item)=>this.props.navigation.navigate('Detail',{item})}
             />
         )
     }
